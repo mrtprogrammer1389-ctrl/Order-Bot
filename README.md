@@ -1,48 +1,28 @@
-```markdown
+
 # 🛒 Project Order Management Bot (Binary Secrets Ecosystem)
-
-[![Python Version](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org)
-[![Bot API](https://img.shields.io/badge/Bot%20Platform-Bale-green.svg)](https://github.com/python-bale-bot/bale.py)
-[![Database](https://img.shields.io/badge/Database-SQLite3-lightgrey.svg)](https://www.sqlite.org/index.html)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 An automated backend infrastructure and interactive messaging agent built for the development team **Binary secrets**. This system manages client project requests from initial submission to admin evaluation (Accept/Reject Workflow) using an asynchronous state machine architecture over the Bale Messenger Bot API and a highly optimized relational SQLite database.
-
----
-
 ## ✨ Key Features & Enhancements
-
 ### 👥 1. Client Interactive Interface (User UI)
-* **Step-by-Step Order Wizard:** Guides users through a structured state machine to collect `Project Title`, `Description`, and `Budget/Suggested Amount`.
-* **Dynamic Inline Menus:** Rich graphical layout using inline keyboards for seamless navigation (`ثبت سفارش🖌️⚙️`, `سفارش‌های من`, `راهنما🔍`, `پشتیبانی🛡️`).
-* **Order Tracking:** Clients can check their active and previous requests fetched in real-time from the ledger.
-
+ * **Step-by-Step Order Wizard:** Guides users through a structured state machine to collect Project Title, Description, and Budget/Suggested Amount.
+ * **Dynamic Inline Menus:** Rich graphical layout using inline keyboards for seamless navigation (ثبت سفارش🖌️⚙️, سفارش‌های من, راهنما🔍, پشتیبانی🛡️).
+ * **Order Tracking:** Clients can check their active and previous requests fetched in real-time from the ledger.
 ### 👑 2. Admin Panel & Decision Engine
-* **Gateway Authentication:** Dedicated administrative functions restricted to verified team chat IDs.
-* **Queue Inspection (`/inline_orders`):** Spawns a dedicated dashboard displaying raw pending orders.
-* **One-Click Evaluation:** Admins utilize inline callback buttons to instantly **Accept** or **Reject** proposals.
-* **Automated Dispatch:** When an order is approved, the system automatically triggers a confirmation broadcast back to the client, facilitating subsequent deposit/advanced payment interactions.
-
+ * **Gateway Authentication:** Dedicated administrative functions restricted to verified team chat IDs.
+ * **Queue Inspection (/inline_orders):** Spawns a dedicated dashboard displaying raw pending orders.
+ * **One-Click Evaluation:** Admins utilize inline callback buttons to instantly **Accept** or **Reject** proposals.
+ * **Automated Dispatch:** When an order is approved, the system automatically triggers a confirmation broadcast back to the client, facilitating subsequent deposit/advanced payment interactions.
 ### ⚡ 3. Performance & Structural Optimizations
-* **Persistent Cursor Lifecycle:** Shared execution pool Utilizing a singular global `self.dat` and `self.cursor` instance initialized once at startup. This prevents excessive database connection spawns, drastically lowering host RAM/CPU consumption.
-* **Refined Admin Resolution:** Corrected administrative routing identifiers preventing gateway bypassing or failed operational handshakes.
-
----
-
+ * **Persistent Cursor Lifecycle:** Shared execution pool Utilizing a singular global self.dat and self.cursor instance initialized once at startup. This prevents excessive database connection spawns, drastically lowering host RAM/CPU consumption.
+ * **Refined Admin Resolution:** Corrected administrative routing identifiers preventing gateway bypassing or failed operational handshakes.
 ## 🧰 Tech Stack & Modules
-
-* **Core Language:** `Python 3.8+`
-* **Bot Framework:** `bale` library (Asynchronous event-driven wrapper for the Bale bot platform).
-* **Storage Layer:** `sqlite3` (Relational ledger with persistent query filters and structural optimization).
-* **System Utilities:** `os`, `json`.
-
----
-
+ * **Core Language:** Python 3.8+
+ * **Bot Framework:** bale library (Asynchronous event-driven wrapper for the Bale bot platform).
+ * **Storage Layer:** sqlite3 (Relational ledger with persistent query filters and structural optimization).
+ * **System Utilities:** os, json.
 ## 🚀 Installation & Infrastructure Setup
-
 ### 1. Clone the Source
 ```bash
-git clone [https://github.com/mrtprogrammer1389-ctrl/Data-hider.git](https://github.com/mrtprogrammer1389-ctrl/Data-hider.git)
+git clone https://github.com/mrtprogrammer1389-ctrl/Data-hider.git
 cd Data-hider
 
 ```
@@ -94,6 +74,3 @@ Distributed under the MIT License.
  * **Email:** mrt.programmer1389@gmail.com
  * **Telegram:** @Mohammadhhawhd
 *"Turning logic into operational reality."* ⚙️🌐
-```
-
-```
